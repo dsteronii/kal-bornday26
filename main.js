@@ -278,7 +278,7 @@ function createLatitude(radius, latitude) {
     const material = new THREE.LineBasicMaterial({
         color: 0x0c6505,
         transparent: true,
-        opacity: 0.3
+        opacity: 0.7,
     });
 
     const line = new THREE.Line(geometry, material);
@@ -307,7 +307,7 @@ function createLongitude(radius, longitude) {
     const material = new THREE.LineBasicMaterial({
         color: 0x0c6505,
         transparent: true,
-        opacity: 0.3
+        opacity: 0.7,
     });
 
     const line = new THREE.Line(geometry, material);
