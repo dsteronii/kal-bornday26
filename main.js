@@ -182,7 +182,7 @@ function animate() {
     requestAnimationFrame(animate);
 
     if (!dragging) {
-        globe.rotation.x += 0.002;
+        globe.rotation.y += 0.002;
         glow.rotation.y += 0.002;
     }
 
