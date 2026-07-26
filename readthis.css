@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    background: #050505;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+}
+
+
+#game {
+    width: 800px;
+}
+
+
+#target {
+    font-size: 35px;
+    letter-spacing: 2px;
+    line-height: 1.8;
+}
+
+
+#input {
+    margin-top: 30px;
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+
+    color: white;
+    font-size: 30px;
+    outline: none;
+}
+
+
+.correct {
+    color: white;
+}
+
+
+.incorrect {
+    color: rgb(205, 165, 8);
+}
+
+
+.remaining {
+    color: #555;
+}
+
+
+#finalMessage {
+    display: none;
+    font-size: 30px;
+    text-align: center;
+}
