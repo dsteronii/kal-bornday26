@@ -95,7 +95,7 @@ const glowGeometry = new THREE.SphereGeometry(
 const glowMaterial = new THREE.MeshBasicMaterial({
     color: 0x0c6505,
     transparent: true,
-    opacity: 0.007,
+    opacity: 0.07,
 });
 
 const glow = new THREE.Mesh(
@@ -276,7 +276,7 @@ function createLatitude(radius, latitude) {
     const material = new THREE.LineBasicMaterial({
         color: 0x0c6505,
         transparent: true,
-        opacity: 0.07,
+        opacity: 0.05,
     });
 
     const line = new THREE.Line(geometry, material);
@@ -305,7 +305,7 @@ function createLongitude(radius, longitude) {
     const material = new THREE.LineBasicMaterial({
         color: 0x0c6505,
         transparent: true,
-        opacity: 0.07,
+        opacity: 0.05,
     });
 
     const line = new THREE.Line(geometry, material);
