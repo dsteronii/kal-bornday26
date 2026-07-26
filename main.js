@@ -168,8 +168,7 @@ window.addEventListener("touchmove", (event) => {
     let deltaY = event.touches[0].clientY - previousY;
 
     globe.rotation.y += deltaX * 0.01;
-    globe.rotation.x += deltaY * 0.01;
-
+    
     previousX = event.touches[0].clientX;
     previousY = event.touches[0].clientY;
 
