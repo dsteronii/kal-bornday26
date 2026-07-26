@@ -102,9 +102,8 @@ const glow = new THREE.Mesh(
     glowGeometry,
     glowMaterial
 );
-
-scene.add(glow);
 globe.add(glow);
+glow.renderOrder = -1;
 
 // i like to move it move it
 let dragging = false;
@@ -168,6 +167,7 @@ window.addEventListener("touchmove", (event) => {
     let deltaY = event.touches[0].clientY - previousY;
 
     globe.rotation.y += deltaX * 0.01;
+    globe.rotation.x += deltaY * 0.01;
     
     previousX = event.touches[0].clientX;
     previousY = event.touches[0].clientY;
@@ -182,7 +182,6 @@ function animate() {
 
     if (!dragging) {
         globe.rotation.y += 0.002;
-        glow.rotation.y += 0.002;
     }
 
     renderer.render(
@@ -241,7 +240,7 @@ const z = radius * Math.sin(phi) * Math.sin(theta);
 
 
     const material =new THREE.LineBasicMaterial({
-            color: 0x00bb44
+            color: 0x00bb44,
             opacity:0.3
         });
 
