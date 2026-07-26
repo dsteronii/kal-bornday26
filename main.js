@@ -49,7 +49,7 @@ const geometry = new THREE.SphereGeometry(
 const material = new THREE.MeshBasicMaterial({
     color: 0x094504,
     transparent: true,
-    opacity: 0.7,
+    opacity: 0.067,
 });
 
 
