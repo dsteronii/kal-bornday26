@@ -95,7 +95,7 @@ const glowGeometry = new THREE.SphereGeometry(
 const glowMaterial = new THREE.MeshBasicMaterial({
     color: 0x0c6505,
     transparent: true,
-    opacity: 0.03,
+    opacity: 0.3,
 });
 
 const glow = new THREE.Mesh(
@@ -103,7 +103,6 @@ const glow = new THREE.Mesh(
     glowMaterial
 );
 globe.add(glow);
-glow.renderOrder = -1;
 
 // i like to move it move it
 let dragging = false;
