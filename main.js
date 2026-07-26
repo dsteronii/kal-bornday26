@@ -151,7 +151,6 @@ window.addEventListener("mousemove", (event) => {
     let deltaY = event.clientY - previousY;
 
     globe.rotation.y += deltaX * 0.005;
-    globe.rotation.x += deltaY * 0.005;
 
     previousX = event.clientX;
     previousY = event.clientY;
