@@ -49,7 +49,7 @@ const geometry = new THREE.SphereGeometry(
 const material = new THREE.MeshBasicMaterial({
     color: 0x094504,
     transparent: true,
-    opacity: 0.67,
+    opacity: 0.67
 });
 
 
@@ -240,9 +240,9 @@ const z = radius * Math.sin(phi) * Math.sin(theta);
         .setFromPoints(points);
 
 
-    const material =
-        new THREE.LineBasicMaterial({
+    const material =new THREE.LineBasicMaterial({
             color: 0x00bb44
+            opacity:0.3
         });
 
 
