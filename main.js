@@ -49,7 +49,7 @@ const geometry = new THREE.SphereGeometry(
 const material = new THREE.MeshBasicMaterial({
     color: 0x094504,
     transparent: true,
-    opacity: 0.067,
+    opacity: 0.67,
 });
 
 
@@ -87,7 +87,7 @@ loader.load(
     }
 );
 const glowGeometry = new THREE.SphereGeometry(
-    1.57,
+    1.6,
     64,
     64
 );
@@ -104,7 +104,7 @@ const glow = new THREE.Mesh(
 );
 
 scene.add(glow);
-
+globe.add(glow);
 
 // i like to move it move it
 let dragging = false;
@@ -277,7 +277,7 @@ function createLatitude(radius, latitude) {
     const material = new THREE.LineBasicMaterial({
         color: 0x0c6505,
         transparent: true,
-        opacity: 0.05,
+        opacity: 0.7,
     });
 
     const line = new THREE.Line(geometry, material);
@@ -306,7 +306,7 @@ function createLongitude(radius, longitude) {
     const material = new THREE.LineBasicMaterial({
         color: 0x0c6505,
         transparent: true,
-        opacity: 0.05,
+        opacity: 0.7,
     });
 
     const line = new THREE.Line(geometry, material);
@@ -326,4 +326,3 @@ for (let lon = 0; lon < 360; lon += 15) {
 // positioning that thang
 
 globe.position.y = -0.2;
-glow.position.y = -0.2;
