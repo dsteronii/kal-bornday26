@@ -95,7 +95,7 @@ const glowGeometry = new THREE.SphereGeometry(
 const glowMaterial = new THREE.MeshBasicMaterial({
     color: 0x0c6505,
     transparent: true,
-    opacity: 0.3,
+    opacity: 0.067,
 });
 
 const glow = new THREE.Mesh(
