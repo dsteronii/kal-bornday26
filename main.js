@@ -87,7 +87,7 @@ loader.load(
     }
 );
 const glowGeometry = new THREE.SphereGeometry(
-    1.51,
+    1.57,
     64,
     64
 );
@@ -95,7 +95,7 @@ const glowGeometry = new THREE.SphereGeometry(
 const glowMaterial = new THREE.MeshBasicMaterial({
     color: 0x0c6505,
     transparent: true,
-    opacity: 0.07,
+    opacity: 0.03,
 });
 
 const glow = new THREE.Mesh(
@@ -151,6 +151,7 @@ window.addEventListener("mousemove", (event) => {
     let deltaY = event.clientY - previousY;
 
     globe.rotation.y += deltaX * 0.005;
+    globe.rotation.x += deltaY * 0.005;
 
     previousX = event.clientX;
     previousY = event.clientY;
