@@ -113,16 +113,35 @@ let previousY = 0;
 
 // THIS IS FOR THE THING SO WHEN U PINDOT IT IKOT KUHA MO BA
 window.addEventListener("mousedown", (event) => {
+
     dragging = true;
+
     previousX = event.clientX;
     previousY = event.clientY;
+
 });
 
+// PHONE VER PLS DONT BREAK
+window.addEventListener("touchstart", (event) => {
 
+    dragging = true;
+
+    previousX = event.touches[0].clientX;
+    previousY = event.touches[0].clientY;
+
+});
+//release release release
 window.addEventListener("mouseup", () => {
     dragging = false;
 });
 
+// PHONE: release
+window.addEventListener("touchend", () => {
+
+    dragging = false;
+
+});
+//moving while holding mouse edition
 
 window.addEventListener("mousemove", (event) => {
 
@@ -136,6 +155,23 @@ window.addEventListener("mousemove", (event) => {
 
     previousX = event.clientX;
     previousY = event.clientY;
+
+});
+
+
+// PHONE: move while touching
+window.addEventListener("touchmove", (event) => {
+
+    if (!dragging) return;
+
+    let deltaX = event.touches[0].clientX - previousX;
+    let deltaY = event.touches[0].clientY - previousY;
+
+    globe.rotation.y += deltaX * 0.01;
+    globe.rotation.x += deltaY * 0.01;
+
+    previousX = event.touches[0].clientX;
+    previousY = event.touches[0].clientY;
 
 });
 // id like to make myself belieeeeve that planet earth turns sllwlyyyyy id like to say that idrather stay wakek when im asleep
